@@ -166,7 +166,6 @@ const Navbar = () => {
             <a href="https://www.regalisrealtymedia.com" className="nav-link" data-page="home" onClick={closeMenu}>Home</a>
             <a href="https://regalisrealtymedia25.pixieset.com/regalisrealtymediaportfolio/compassphotos/" className="nav-link" data-page="portfolio" target="_blank" onClick={closeMenu}>Portfolio</a>
             <a href="https://pricing.regalisrealtymedia.com" className="nav-link" data-page="pricing" onClick={closeMenu}>Pricing</a>
-            <a href="https://calculator.regalisrealtymedia.com" className="nav-link" data-page="calculator" onClick={closeMenu}>Calculator</a>
             <a href="https://catalog.regalisrealtymedia.com" className="nav-link" data-page="catalog" onClick={closeMenu}>Catalog</a>
             <a href="https://branding.regalisrealtymedia.com" className="nav-link" data-page="branding" onClick={closeMenu}>Branding</a>
             <a href="https://portal.regalisrealtymedia.com" className="nav-link" data-page="portal" onClick={closeMenu}>Portal</a>
@@ -312,23 +311,18 @@ const CompletionMessage = ({ show }: { show: boolean }) => {
 
 const Footer = ({ onReset }: { onReset: () => void }) => (
   <>
-    <footer className="checklist-footer">
-      <img src="https://cdn.prod.website-files.com/6695980889d8d99cedb29bc7/66c7f601fff376e4c95274b3_Regalis%20Realty%20Main%20Logo%20(1).png" alt="Regalis Realty Media" className="footer-logo mx-auto" />
-      <p className="footer-brand">Regalis Realty Media</p>
-      <p className="footer-text">Have questions before your shoot?</p>
-      <div className="footer-actions">
-        <a href="tel:9176838034" className="footer-action-btn footer-call">
-          <span>📞</span> Tap to Call (917) 683-8034
-        </a>
-        <a href="mailto:contact@regalisrealtymedia.com" className="footer-action-btn footer-email">
-          <span>✉️</span> Email Us
-        </a>
+    <div className="text-center mb-12">
+      <a href="#" onClick={(e) => { e.preventDefault(); onReset(); }} className="text-[#666] text-[12px] no-underline transition-colors hover:text-[#999]">
+        Reset Checklist
+      </a>
+    </div>
+    <footer className="bg-black text-center py-[32px] px-[24px] border-t border-white/5">
+      <p className="text-[#999] text-[14px] mb-[12px] m-0">© 2026 Regalis Realty Media</p>
+      <div className="flex justify-center gap-[24px]">
+        <a href="https://termsandconditions.regalisrealtymedia.com/" className="text-[#c9a84c] text-[14px] no-underline hover:underline">Terms &amp; Conditions</a>
+        <a href="https://privacypolicy.regalisrealtymedia.com/" className="text-[#c9a84c] text-[14px] no-underline hover:underline">Privacy Policy</a>
       </div>
-      <p className="footer-copy">All rights reserved 2025</p>
     </footer>
-    <p className="reset-link">
-      <a href="#" onClick={(e) => { e.preventDefault(); onReset(); }}>Reset Checklist</a>
-    </p>
   </>
 );
 
